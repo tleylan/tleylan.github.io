@@ -1,6 +1,17 @@
-﻿html, body {
-    font-family: sans-serif;
-    font-size: 14px;
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 app {
@@ -20,12 +31,23 @@ app {
 }
 
     .main .top-row {
-        background-color: #e6e6e6;
+        background-color: #f7f7f7;
         border-bottom: 1px solid #d6d5d5;
+        justify-content: flex-end;
     }
 
+        .main .top-row > a, .main .top-row .btn-link {
+            white-space: nowrap;
+            margin-left: 1.5rem;
+        }
+
+.main .top-row a:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(0, 0, 75) 0%, #00ffff 70%);
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
 
     .sidebar .top-row {
@@ -36,7 +58,7 @@ app {
         font-size: 1.1rem;
     }
 
-    .sidebar .fa {
+    .sidebar .oi {
         width: 2rem;
         font-size: 1.1rem;
         vertical-align: text-top;
@@ -75,12 +97,12 @@ app {
                 color: white;
             }
 
-    .sidebar .navbar-toggler {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-
 .content {
     padding-top: 1.1rem;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -95,222 +117,40 @@ app {
     color: red;
 }
 
-
-.tlf-logo {
-    position: relative;
-    display: block;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: 5%;
-    width: 25%;
-    max-width: 25%;
-    height: auto;
-}
-
-
-.tlf-message {
-    font-size: 2.5rem;
-    color: #1767e0;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: 15%;
-    text-align: right;
-}
-
-
-.leylan-host {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-}
-
-
-.leylan {
-    font-family: 'dosis', sans-serif;
-    color: #999;
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-    line-height: 4rem;
-}
-
-.logo {
-    font-size: 10rem;
-    text-align: right;
-}
-
-.dots {
-    font-size: 3rem;
-    text-align: right;
-}
-
-
-.dynamic1-table {
-    width: 100%;
-    border-spacing: 5px;
-}
-
-.dynamic1-dot {
-    height: 20px;
-    width: 20px;
-    background-color: #7b68ee;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-
-.bees-panel {
-    position: relative;
-    margin: 20px 0 0 20px;
-}
-
-.bees {
-    box-sizing: border-box;
-    position: relative;
-    height: 500px;
-    width: 500px;
-    background-color: #000;
-    border: 1px solid #00ff00;
-}
-
-.bees-stats {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 10px;
-    font-size: 1em;
-}
-
-.bees-title {
-    position: absolute;
+#blazor-error-ui {
+    background: lightyellow;
     bottom: 0;
-    right: 20px;
-    font-size: 2em;
-}
-
-
-.clock1-panel {
-    position: relative;
-    padding: 20px 0 0 20px;
-    width: 350px;
-}
-
-.clock1 .clock-message {
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
     width: 100%;
-    color: #fff;
-    text-align: center;
-    font-size: 1rem;
+    z-index: 1000;
 }
 
-.clock1 .clock-face {
-    width: 100%;
-    padding-left: 10px;
-    background-color: #0000ff;
-    color: #fff;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    font-size: 4rem;
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
 }
-
-.clock1 .clock-timer {
-    width: 100%;
-    background-color: #0000ff;
-    color: #fff;
-    border: 1px solid #ffffff;
-    border-radius: 2px;
-    text-align: center;
-    font-size: 1rem;
-}
-
-
-.counter-panel {
-    position: relative;
-    padding: 20px 0 0 20px;
-    width: 350px;
-}
-
-.counter-message {
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    font-size: 1rem;
-}
-
-
-.login-form {
-    width: 400px;
-}
-
-
-.map {
-    height: 700px;
-    width: 100%;
-}
-
-
-.message-panel {
-    padding: 20px 0 0 20px;
-}
-
-
-.musicplayer-panel {
-    position: relative;
-    padding: 20px 0 10px 20px;
-}
-
-.musicplayer {
-    width: 380px;
-    padding: 10px;
-    background-color: #0000ff;
-    border: 1px solid #ffffff;
-}
-
-
-.wow-panel {
-    padding: 20px 0 0 20px;
-}
-
-
-.video-host {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-}
-
-.video1-panel {
-    padding: 20px 0 0 20px;
-}
-
-
-/* extra small devices */
-/* no media query since this is the default in Bootstrap */
 
 @media (max-width: 767.98px) {
-
-    .main .top-row {
+    .main .top-row:not(.auth) {
         display: none;
     }
-}
 
-@media (max-width: 991.98px) {
+    .main .top-row.auth {
+        justify-content: space-between;
+    }
 
-    .leylan {
-        display: none !important;
+    .main .top-row a, .main .top-row .btn-link {
+        margin-left: 0;
     }
 }
 
-
-/* small devices */
 @media (min-width: 768px) {
-
-    /*.leylan-host {
-        background-color: #D91C1C;
-    }*/
-
     app {
         flex-direction: row;
     }
@@ -337,92 +177,7 @@ app {
     }
 
     .sidebar .collapse {
+        /* Never collapse the sidebar for wide screens */
         display: block;
-    }
-}
-
-
-/* medium devices */
-@media (min-width: 992px) {
-
-    /*.leylan-host {
-        background-color: #2DD42D;
-    }*/
-
-    .logo {
-        font-size: 5rem;
-    }
-}
-
-
-/* large devices */
-@media (min-width: 1200px) {
-
-    /*.leylan-host {
-        background-color: #2020D4;
-    }*/
-
-    .logo {
-        font-size: 10rem;
-    }
-}
-
-
-.blazored-custom-modal {
-    display: flex;
-    flex-direction: column;
-    width: 60vw;
-    height: 60vh;
-    background-color: #fafafa;
-    border-radius: 12px;
-    border: 1px solid #fff;
-    padding: 0.5rem;
-    z-index: 102;
-    box-shadow: 0 2px 2px rgba(0,0,0,.75);
-}
-
-.blazored-prompt-modal {
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    background-color: #fefefe;
-    border-radius: 4px;
-    border: 1px solid #fff;
-    padding: 0.5rem;
-    z-index: 102;
-    box-shadow: 0 2px 2px rgba(0,0,0,.75);
-}
-
-    .blazored-prompt-modal .blazored-modal-header {
-        display: none;
-    }
-
-
-.scene-div {
-    height: 800px;
-    width: 1200px;
-}
-
-
-.animation1 {
-    animation-name: animation1;
-    animation-duration: 3s;
-}
-
-@keyframes animation1 {
-    0% {
-        color: red;
-    }
-
-    25% {
-        color: yellow;
-    }
-
-    50% {
-        color: blue;
-    }
-
-    100% {
-        color: green;
     }
 }
