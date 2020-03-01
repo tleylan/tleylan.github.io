@@ -164,6 +164,19 @@ app {
 }
 
 
+.video-host {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+.video1-panel {
+    padding: 20px 0 0 20px;
+}
+
+
 /* extra small devices */
 /* no media query since this is the default in Bootstrap */
 
