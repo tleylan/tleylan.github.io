@@ -25,7 +25,26 @@ app {
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(0, 0, 75) 0%, #00ffff 70%);
+    /*background-image: linear-gradient(180deg, rgb(0, 0, 75) 0%, #00ffff 70%);*/
+    /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #ff00ff);
+    background-size: 600% 100%;
+    animation: gradient 20s ease infinite;
+    /*animation-direction: alternate;*/
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .sidebar .top-row {
@@ -95,6 +114,30 @@ app {
     color: red;
 }
 
+
+.blazor-message {
+    font-size: 2.5rem;
+    color: blue;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 15%;
+    text-align: right;
+}
+
+.msg-animation {
+    animation-name: animation1;
+    animation-duration: 3s;
+}
+
+@keyframes animation1 {
+
+    50% {
+        color: red;
+        font-size: 7.5rem;
+    }
+}
+
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
@@ -112,6 +155,12 @@ app {
     position: absolute;
     right: 0.75rem;
     top: 0.5rem;
+}
+
+
+.map {
+    height: 700px;
+    width: 100%;
 }
 
 
@@ -224,4 +273,10 @@ app {
 
 .blazored-prompt-modal .blazored-modal-header {
     display: none;
+}
+
+
+.scene-div {
+    height: 800px;
+    width: 1200px;
 }
